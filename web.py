@@ -4,8 +4,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return "<p>Pràctica Flask</p>"
 
+# si no especifiquem res al decorator, és el mètode GET
 @app.route('/formulari')
 def formulari_get():
     # mostrem el formulari
@@ -25,4 +26,4 @@ from flask import request
 def formulari_post():
     # processem les dades del formulari
     nom = request.form["nom"]
-    return "Salut, {}".format(nom)
+    return "Salut i força, {}".format(nom)
